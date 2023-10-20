@@ -1,0 +1,87 @@
+{
+    "member": [
+      {
+        "id": "1",
+        "name": "jessica",
+        "email": "first@gmail.com",
+        "cupNum": "5"
+      },
+      {
+        "id": "2",
+        "date": "20230901",
+        "name": "fred",
+        "email": "dsf@gmail.com",
+        "cupNum": "2"
+      },
+      {
+        "id": "3",
+        "date": "20230901",
+        "name": "Pam",
+        "email": "ds@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "4",
+        "date": "20230901",
+        "name": "ryan",
+        "email": "fds@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "5",
+        "date": "20230901",
+        "name": "marco",
+        "email": "fdskimddd@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "6",
+        "date": "20230901",
+        "name": "kim",
+        "email": "fdsfds@gmail.com",
+        "cupNum": "2"
+      },
+      {
+        "id": "7",
+        "date": "20230901",
+        "name": "marvels",
+        "email": "dsdfsfd@gmail.com",
+        "cupNum": "3"
+      },
+      {
+        "id": "8",
+        "date": "20230901",
+        "name": "howie",
+        "email": "fd@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "9",
+        "date": "20230901",
+        "name": "rachel",
+        "email": "dsasaf@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "10",
+        "date": "20230901",
+        "name": "mia",
+        "email": "mia@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "11",
+        "date": "20230901",
+        "name": "fred",
+        "email": "fdsfd@gmail.com",
+        "cupNum": "1"
+      },
+      {
+        "id": "12",
+        "date": "20230901",
+        "name": "sam",
+        "email": "fdsfsdf@gmail.com",
+        "cupNum": "1"
+      }
+    ]
+  }
