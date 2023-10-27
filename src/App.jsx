@@ -16,7 +16,7 @@ const ObjectModelings = () => {
   const obj = useLoader(OBJLoader, "/structure2.obj");
   const cup = useLoader(OBJLoader, "/koffie2.obj");
 
-  const material = new THREE.MeshBasicMaterial({ color: new THREE.Color('rgb(255, 204, 0)') });
+  const material = new THREE.MeshStandardMaterial({ color: new THREE.Color('rgb(255, 204, 0)') });
 
   const setObjectMaterial = (parentObject) => {
     parentObject.traverse((child) => {
@@ -30,7 +30,8 @@ const ObjectModelings = () => {
   setObjectMaterial(obj);
   setObjectMaterial(cup);
 
-  cup.position.set(0, 0, 0);
+  obj.position.set(0, -90, 0);
+  cup.position.set(0, -90, 0);
 
   return (
     <>
@@ -53,16 +54,16 @@ export default function App() {
           fov: 60,
           near: 1,
           far: 10000,
-          zoom: 10,
+          zoom: 13,
         }}
         style={{ height: "100vh", width: "100vw" }}
       >
-
-        <ambientLight intensity={0.1} />
+        <color attach="background" args={['blue']} /> 
+        <ambientLight intensity={0.9} />
         <directionalLight
-          color="black"
-          position={[0, 0, 5]}
-/>
+          color="yellow"
+          position={[0, 90, 5]}
+        />
 
         <ObjectModelings />
 
@@ -74,3 +75,5 @@ export default function App() {
     </div>
   );
 }
+
+export {App};

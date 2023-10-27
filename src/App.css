@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 .App {
-  font-family: sans-serif;
+  font-family: "Noto Sans Display", sans-serif;
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -13,6 +16,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  background-color: blue;
 }
 
 .navbar-container {
@@ -43,7 +47,7 @@ body {
   max-height: 100vh;
   overflow-y: auto; /* Adds scroll if content exceeds max height */
   width: 100%; /* You might want to adjust this depending on your design */
-  background-color: white; /* Any color that fits your design */
+  background-color: blue; /* Any color that fits your design */
   /* Additional styling properties like border, shadow, etc. */
   z-index: 1000; /* Make sure dropdown is above other elements */
   top: 100%; /* Positions right below the parent container, adjust if necessary */

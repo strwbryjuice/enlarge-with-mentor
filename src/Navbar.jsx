@@ -2,9 +2,11 @@
 // 터미널1에  yarn dev
 // 터미널2에 json-server db/data.json --port 3001
 
-import React from "react";
 import "./App.css";
 import MemberSearch from "./MemberSearch.jsx";
+import { Link } from "react-router-dom";
+
+
 
 const Navbar = () => {
 
@@ -13,13 +15,13 @@ const Navbar = () => {
       <div>
         <ul className="navbar-menu">
           <li className="navbar-menu-item">
-            <a href="#">About</a>
+            <Link to ="/about">About</Link>
           </li>
           <li className="navbar-menu-item">
-            <a href="#">Support</a>
+            <Link to ="/support">Support</Link>
           </li>
           <li className="navbar-menu-item">
-            <a href="#">Arrivals</a>
+            <Link to ="/arrivals">Arrivals</Link>
           </li>
         </ul>
       </div>

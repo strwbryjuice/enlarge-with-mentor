@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
-  font-family: Noto Sans, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,12 +16,14 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
+  font-family: "Noto Sans Display";
+  font-size: 1.4vw;
+  font-weight: 300;
+  color: yellow;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: red;
 }
 
 body {
@@ -29,6 +32,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: yellow;
 }
 
 h1 {
@@ -48,7 +52,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: red;
 }
 button:focus,
 button:focus-visible {
@@ -58,10 +62,10 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color:blue;
   }
   a:hover {
-    color: #747bff;
+    color: red;
   }
   button {
     background-color: #f9f9f9;
@@ -79,5 +83,5 @@ li {
 .navbarDiv {
   background-color: blue;
   width: 100vw;
-  height: 30px;
+  height: 50px;
 }
