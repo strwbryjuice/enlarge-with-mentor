@@ -6,7 +6,6 @@ import { OrbitControls } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { DDSLoader } from "three-stdlib";
 
-import Navbar from "./Navbar.jsx";
 
 import "./App.css";
 
@@ -16,7 +15,7 @@ const ObjectModelings = () => {
   const obj = useLoader(OBJLoader, "/structure2.obj");
   const cup = useLoader(OBJLoader, "/koffie2.obj");
 
-  const material = new THREE.MeshStandardMaterial({ color: new THREE.Color('rgb(255, 204, 0)') });
+  const material = new THREE.MeshStandardMaterial({ color: new THREE.Color('rgb(255, 255, 0)') });
 
   const setObjectMaterial = (parentObject) => {
     parentObject.traverse((child) => {
@@ -44,19 +43,15 @@ const ObjectModelings = () => {
 export default function App() {
   return (
     <div className="App">
-
-      <Navbar />
-
-      <Canvas
+      <Canvas 
 
         camera={{
-          position: [900, 900, 4000],
+          position: [600, 300, 600],
           fov: 60,
           near: 1,
-          far: 10000,
-          zoom: 13,
+          far: 100000,
+          zoom: 2,
         }}
-        style={{ height: "100vh", width: "100vw" }}
       >
         <color attach="background" args={['blue']} /> 
         <ambientLight intensity={0.9} />

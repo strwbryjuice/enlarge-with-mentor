@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.languageBox{
+    font-family: "Noto Sans Display";
+    display: flex; 
+    justify-content: flex-end;
+    padding-left: 15px;
+}
+
+.underbar{
+    height: 0;
+    margin: yellow;
+    margin: 0;
+}

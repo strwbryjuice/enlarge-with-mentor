@@ -1,0 +1,57 @@
+ul {
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline;
+  }
+
+.navbar {
+  display: fixed;
+  background-color: blue;
+  z-index: 6;
+  font-weight: 300;
+  font-size: 1.3rem; 
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  align-items: center; 
+}
+.right-navbar{
+  display: flex;
+  align-items: center; 
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem; /* Adjust the space between menu items */
+  margin: 0; /* Remove default margin */
+  padding-left: 0;
+}
+
+.search-container {
+  margin-left: 15px;
+}
+
+.search-dropdown {
+  position: absolute; /* Positions the dropdown out of the document flow so it doesn't affect the navbar's height */
+  max-height: 100vh;
+  overflow-y: auto; /* Adds scroll if content exceeds max height */
+  width: 100%; /* You might want to adjust this depending on your design */
+  background-color: blue;
+  z-index: 1000; /* Make sure dropdown is above other elements */
+  top: 100%; /* Positions right below the parent container, adjust if necessary */
+  left: 0; /* Aligns with the left edge of the parent container */
+  margin-right: 0.1rem;
+}
+
+.home-button{
+  width: 20px;
+  height: 20px;
+  background-color: yellow; 
+  margin-left: 1rem;
+}

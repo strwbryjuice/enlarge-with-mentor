@@ -1,0 +1,36 @@
+#plus-minus-div {
+    display: flex;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: lightblue;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .horizontal-line, .vertical-line {
+    position: absolute;
+    background-color: yellow;
+    height: 2px;
+    width: 10px;
+  }
+  
+  .vertical-line {
+    height: 10px;
+    width: 2px;
+  }
+  
+  .plus, .minus {
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
