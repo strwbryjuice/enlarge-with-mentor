@@ -15,16 +15,17 @@ const rows = [
     createData('', 4, 20230513, "shipping", 3, "jessica@gmail.com"),
 ];
 
-function createData(name, calories, fat, carbs, protein, email) {
-    return { name, calories, fat, carbs, protein, email};
+function createData(status, membernumber, sendingdate, sendingmethod, cupnum, email) {
+    return { status, membernumber, sendingdate, sendingmethod, cupnum, email};
 }
 
+const changingStatus ="NEW"
 
 function Admin() {
     
     return (
-        < TableContainer component = { Paper } >
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        < TableContainer className="admin-table-container" component = { Paper } >
+            <Table sx={{ minWidth: 650}} aria-label="simple table">
                 <TableHead >
                     <TableRow className="admin-table">
                         <TableCell align="center">Status </TableCell>
@@ -38,16 +39,17 @@ function Admin() {
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow className="admin-table"
-                            key={row.name}
+                            key={row.status}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                {row.name}
+                                <div className="status-div">{changingStatus}</div>
+                                {row.status}
                             </TableCell>
-                            <TableCell align="center">{row.calories}</TableCell>
-                            <TableCell align="center">{row.fat}</TableCell>
-                            <TableCell align="center">{row.carbs}</TableCell>
-                            <TableCell align="center">{row.protein}</TableCell>
+                            <TableCell align="center">{row.membernumber}</TableCell>
+                            <TableCell align="center">{row.sendingdate}</TableCell>
+                            <TableCell align="center">{row.sendingmethod}</TableCell>
+                            <TableCell align="center">{row.cupnum}</TableCell>
                             <TableCell align="center">{row.email}</TableCell>
                         </TableRow>
                     ))}

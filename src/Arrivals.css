@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.arrivals-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 15px;
+}
+
+
+.arrivals-left{
+    width: 30%;
+    background-color: rgb(223, 232, 255);
+    height: 100%;
+    min-width: 400px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrivals-right{
+    width: 60%;
+}
+
+.cup-illust-container{
+    position: relative;
+    width: 11em;
+    height: 15em; 
+    margin-left: 25%; 
+    margin-top:10%;
+    z-index: 0;
+}
+
+.cup-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(61, 115, 255);
+    z-index: 1;
+}
+
+.cup-contents{
+    position: absolute;
+    bottom: 0;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: 15%;
+    background-color: yellow;
+    z-index: 2;
+}
+
+.doughnut{
+    position: absolute;
+    left: 3em;
+    top: 1em;
+    z-index: -1;
+}
+
+.cup-q-question{
+    color: blue;
+    font-family: 'Noticia Text', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-left:7%;
+}
+
+.arrivedNum-div{
+    color: blue;
+    font-family: 'Noticia Text', serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-self: flex-end; 
+    margin-right: 10%;
+}

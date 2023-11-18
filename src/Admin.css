@@ -1,4 +1,13 @@
-.admin-table{
+
+.MuiTableCell-root {
     background-color: blue;
-    color: yellow;
+    color: yellow !important;
+    border-bottom: yellow;
+  }
+
+.status-div{
+    background-color: yellow;
+    color: blue;
+    margin: 0 auto;
+    text-align: center;
 }
