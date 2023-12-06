@@ -1,42 +1,56 @@
 .about-container {
-  width: 97%;
+  width: 98%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
-.about-left {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+.about-left, .about-right {
+  display: grid;
+  grid-template-rows: auto 1fr; /* Two rows, the second row takes the remaining space */
 }
 
-.about-right {
-  width: 50%;
-  margin-left: 0;
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
 .about-img {
   width: 100%;
-  height: 300px;
-  background-color: yellow;
-  margin-bottom: 20px;
+  height: 380px;
+  background-color: orange;
+  margin-bottom: 15px;
+}
+
+.img1{
+  background-image: url('/public/img/young-baby-on-the-ground.jpg');
+  background-size: cover;
+}
+
+.img2{
+  background-image: url('/public/img/happy-man.jpg');
+  background-size: cover;
 }
 
 .about-p {
-  margin-left: 15px;
-  margin-top: 0;
+  grid-row: 1; /* Place the paragraph in the first row */
+  margin: 0 15px;
+  font-size: large;
+}
+
+.about-atag{
+  align-self: end; /* Align to the bottom of the second row */
+  justify-self: end; /* Align to the right (end) of the container */
 }
 
 .click-support {
-  width: 150px;
+  width: 220px;
+  height: 50px;
   background-color: yellow;
+  margin-bottom: 15px;
+  margin-right: 5px;
   color: blue;
-  margin-top: auto; /* This pushes the div to the bottom */
-  align-self: flex-end; 
+  font-size: 1.4rem;
+  vertical-align: middle;
+  text-align: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
 }

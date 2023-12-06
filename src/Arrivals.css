@@ -1,77 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.arrivals-container{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin-left: 15px;
+.arrivals-container {
+  display: flex;
+  justify-content: space-between;
+  width: 97.5%;
+  margin-left: 15px;
 }
 
-
-.arrivals-left{
-    width: 30%;
-    background-color: rgb(223, 232, 255);
-    height: 100%;
-    min-width: 400px;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
+.arrivals-left {
+  width: 30%;
+  background-color: rgb(223, 232, 255);
+  height: 100%;
+  min-width: 450px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.arrivals-right{
-    width: 60%;
+.arrivals-right {
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 10px;
 }
 
-.cup-illust-container{
-    position: relative;
-    width: 11em;
-    height: 15em; 
-    margin-left: 25%; 
-    margin-top:10%;
-    z-index: 0;
+.cup-img {
+  background-color: red;
+  height: 130px;
 }
 
-.cup-body{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(61, 115, 255);
-    z-index: 1;
+.textbox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  color: yellow;
 }
 
-.cup-contents{
-    position: absolute;
-    bottom: 0;
-    margin-left: 10%;
-    margin-bottom: 10%;
-    width: 80%;
-    height: 15%;
-    background-color: yellow;
-    z-index: 2;
+.arrivals-right-bottom{
+    display:flex;
+    justify-content: center;
 }
 
-.doughnut{
-    position: absolute;
-    left: 3em;
-    top: 1em;
-    z-index: -1;
+.pagination-container{
+    padding: 3px;
 }
 
-.cup-q-question{
-    color: blue;
-    font-family: 'Noticia Text', serif;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-left:7%;
+.pagination-item{
+    color: yellow !important;
 }
 
-.arrivedNum-div{
-    color: blue;
-    font-family: 'Noticia Text', serif;
-    font-size: 1.6rem;
-    font-weight: 500;
-    align-self: flex-end; 
-    margin-right: 10%;
+.MuiSvgIcon-root {
+  color: yellow !important;
 }
+
+.cup-container-outside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cup-illust-container {
+  position: relative;
+  width: 11em;
+  height: 15em;
+  z-index: 0;
+}
+
+.cup-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(61, 115, 255);
+  z-index: 1;
+}
+
+.cup-contents {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  width: 80%;
+  height: 30%; /* 0부터 85까지 높이 조절 DB와 연결해야함*/
+  background-color: yellow;
+  z-index: 2;
+}
+
+.doughnut {
+  position: absolute;
+  left: 3em;
+  top: 1em;
+  z-index: -1;
+}
+
+.cup-q-question {
+  color: blue;
+  font-family: "Noticia Text", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-left: 7%;
+}
+
+.arrivedNum-div {
+  color: blue;
+  font-family: "Noticia Text", serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  align-self: flex-end;
+  margin-right: 10%;
+}
+
+.MuiPaper-root {
+  background-color: transparent !important;
+  min-height: 150px;
+  padding: 8;
+}
+
