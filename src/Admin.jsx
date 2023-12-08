@@ -7,11 +7,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "./Admin.css";
 
-// import Pagination from '@mui/material/Pagination';
-// import PaginationItem from '@mui/material/PaginationItem';
-// import { Link, useLocation } from 'react-router-dom';
+import Pagination from '@mui/material/Pagination';
+import PaginationItem from '@mui/material/PaginationItem';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const rows = [
     createData('', 0, 20230513, "drop by", 5, "jessica@gmail.com"),
@@ -34,22 +34,24 @@ function createData(status, membernumber, sendingdate, sendingmethod, cupnum, em
 
 const changingStatus = "NEW"
 
-// const theme = createTheme({
-//     palette: {
-//         primary: {
-//             light: '#FFFF00',
-//             main: '#FFFF00',
-//             dark: '#FFFF00',
-//             darker: '#FFFF00',
-//         },
-//     },
-// });
+const theme = createTheme({
+    palette: {
+        primary: {
+            light: '#FFFF00',
+            main: '#FFFF00',
+            dark: '#FFFF00',
+            darker: '#FFFF00',
+        },
+    },
+});
 
-// const location = useLocation();
-// const query = new URLSearchParams(location.search);
-// const page = parseInt(query.get('page') || '1', 10);
 
 function Admin() {
+    const location = useLocation();
+    const query = new URLSearchParams(location.search);
+    const page = parseInt(query.get('page') || '1', 10);
+
+    let navigate = useNavigate();
 
     return (
 
@@ -88,9 +90,8 @@ function Admin() {
                     </Table>
                 </TableContainer>
             </div>
-
             <div className="admin-bottom">
-                {/* <div className="pagination-container">
+                <div className="pagination-container">
                     <ThemeProvider theme={theme}>
                         <Pagination
                             page={page}
@@ -98,6 +99,11 @@ function Admin() {
                             color="primary"
                             renderItem={(item) => (
                                 <PaginationItem className="pagination-item"
+                                    onclick={
+                                        ()=>{
+                                            navigate(`/inbox${item.page === 1 ? '' : `?page=${item.page}`}`)
+                                        }
+                                    }
                                     component={Link}
                                     to={`/inbox${item.page === 1 ? '' : `?page=${item.page}`}`}
                                     {...item}
@@ -105,7 +111,7 @@ function Admin() {
                             )}
                         />
                     </ThemeProvider>
-                </div> */}
+                </div>
             </div>
 
         </div>

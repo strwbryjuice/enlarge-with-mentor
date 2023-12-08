@@ -6,17 +6,24 @@ const CanvasDrawing = () => {
     const [isDrawing, setIsDrawing] = useState(false);
     const [isErasing, setIsErasing] = useState(false);
 
+    useEffect(()=>{
+        const canvas = canvasRef.current;
+        canvas.width = 500;
+        canvas.height = 500;
+    }, [])
+    
     useEffect(() => {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
-        canvas.width = 500;
-        canvas.height = 500;
 
         const startDrawing = (e) => {
+            if (!isDrawing) {
             const { offsetX, offsetY } = e;
             context.beginPath();
             context.moveTo(offsetX, offsetY);
-            setIsDrawing(true);
+                console.log("Start drawing")
+                setIsDrawing(true);
+            }
         };
 
         const draw = (e) => {
@@ -33,6 +40,7 @@ const CanvasDrawing = () => {
 
         const stopDrawing = () => {
             if (isDrawing) {
+                console.log("Finish drawing")
                 context.closePath();
                 setIsDrawing(false);
             }
