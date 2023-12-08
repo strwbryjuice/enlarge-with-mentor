@@ -1,0 +1,38 @@
+.support-container{
+    width: 98vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.support-left-top , .support-left-bottom{
+    width: 48vw;
+    margin-left: 60px;
+}
+.basic-info-head{
+    font-size: 2.5em;
+    margin: 0px;
+}
+
+.support-right-top{
+    width: 48vw;
+    margin-top: 50px;
+}
+
+.support-left-top{
+    width: 48vw;
+    margin-top: 10px;
+}
+
+.mouse-drawing-header{
+    font-size: 1.5rem;
+}
+
+.support-label {
+    width: 30vw;
+    margin-bottom: 10px; /* Space between label and input */
+}
+
+/* New styles for inputs and labels */
+.support-input {
+    width: 28%; /* Adjust based on preference */
+}

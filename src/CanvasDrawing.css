@@ -1,0 +1,21 @@
+.canvas-container{
+        background-color: white;
+        width: 500px;
+        height: 500px;
+}
+
+#button-container{
+ display: flex;
+ justify-content: space-between;
+ width: 500px;
+}
+
+.button-left{
+        display: flex;
+        justify-content: flex-start;
+}
+
+.button-right{
+        display: flex;
+        justify-content: flex-end;
+}
