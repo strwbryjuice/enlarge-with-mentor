@@ -1,38 +1,114 @@
-.support-container{
-    width: 98vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.support-container {
+  width: 98vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.support-left-top , .support-left-bottom{
-    width: 48vw;
-    margin-left: 60px;
+.support-left-top,
+.support-left-bottom {
+  width: 48vw;
+  margin-left: 60px;
 }
-.basic-info-head{
-    font-size: 2.5em;
-    margin: 0px;
-}
-
-.support-right-top{
-    width: 48vw;
-    margin-top: 50px;
+.basic-info-head {
+  font-size: 2.5em;
+  margin: 0px;
+  line-height: 95%;
 }
 
-.support-left-top{
-    width: 48vw;
-    margin-top: 10px;
+.support-right-top {
+  width: 48vw;
+  margin-top: 50px;
 }
 
-.mouse-drawing-header{
-    font-size: 1.5rem;
+.support-left-top {
+  width: 48vw;
+  margin-top: 10px;
+}
+
+.mouse-drawing-header {
+  font-size: 1.5rem;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 3px;
 }
 
 .support-label {
-    width: 30vw;
-    margin-bottom: 10px; /* Space between label and input */
+  width: 30%;
+  margin-bottom: 10px; /* Space between label and input */
 }
 
 /* New styles for inputs and labels */
 .support-input {
-    width: 28%; /* Adjust based on preference */
+  width: 96%; /* Adjust based on preference */
+}
+
+input[type="text"]:focus {
+  outline: 1px solid yellow;
+}
+
+input[type="number"]:focus {
+  outline: 1px solid yellow;
+}
+
+#sending-option-asking {
+  width: 69px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.cupnumber-asking {
+  width: 35px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.enlarge-add-container {
+  margin-top: 50px;
+}
+
+.englarge-office-title {
+  font-size: 20px;
+  line-height: 80%;
+}
+.englarge-office-add {
+  margin: 0;
+}
+
+.support-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height:305px;
+  background-color: blue;
+  box-shadow: 24;
+}
+
+.modal-button {
+  background: blue !important;
+  border: 1px solid yellow !important;
+  color: yellow !important;
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 145px;
+}
+
+.modal-button-container{
+  margin-top: 15px;
+  margin-left: 170px;
+}
+
+.support-modal-contents{
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

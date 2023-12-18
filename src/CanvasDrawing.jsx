@@ -1,15 +1,15 @@
 import { useRef, useEffect, useState } from 'react';
 import "./CanvasDrawing.css";
 
-const CanvasDrawing = () => {
+const CanvasDrawing = ({handleOpen}) => {
     const canvasRef = useRef(null);
     const [isDrawing, setIsDrawing] = useState(false);
     const [isErasing, setIsErasing] = useState(false);
 
     useEffect(()=>{
         const canvas = canvasRef.current;
-        canvas.width = 500;
-        canvas.height = 500;
+        canvas.width = 550;
+        canvas.height = 400;
     }, [])
     
     useEffect(() => {
@@ -71,14 +71,14 @@ const CanvasDrawing = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
     };
 
-    const saveCanvas = () => {
-        const canvas = canvasRef.current;
-        const dataUrl = canvas.toDataURL('image/png');
-        const a = document.createElement('a');
-        a.href = dataUrl;
-        a.download = 'drawing.png';
-        a.click();
-    };
+    // const submitInformation = () => {
+    //     const canvas = canvasRef.current;
+    //     const dataUrl = canvas.toDataURL('image/png');
+    //     const a = document.createElement('a');
+    //     a.href = dataUrl;
+    //     a.download = 'drawing.png';
+    //     a.click();
+    // };
 
     return (
         <div>
@@ -87,12 +87,12 @@ const CanvasDrawing = () => {
             </div>
             <div id="button-container">
                 <div className="buttons-left">
-                    <button onClick={() => toggleMode('draw')}>Draw</button>
-                    <button onClick={() => toggleMode('erase')}>Erase</button>
-                    <button onClick={clearCanvas}>Clear</button>
+                    <button className="canvas-drawing-buttons" onClick={() => toggleMode('draw')}>Draw</button>
+                    <button className="canvas-drawing-buttons" onClick={() => toggleMode('erase')}>Erase</button>
+                    <button className="canvas-drawing-buttons" onClick={clearCanvas}>Clear</button>
                 </div>
                 <div className="button-right">
-                    <button onClick={saveCanvas} className="submit-button">Save</button>
+                    <button className="subimit-button" onClick={handleOpen}>Submit</button>
                 </div>
             </div>
         </div>

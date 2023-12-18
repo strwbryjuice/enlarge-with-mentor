@@ -32,6 +32,11 @@ body {
   color: yellow;
 }
 
+input ,select ,button{
+  font-family: "Noto Sans Display";
+  color:blue;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: yellow;

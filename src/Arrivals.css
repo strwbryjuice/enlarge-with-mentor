@@ -36,17 +36,19 @@
   color: yellow;
 }
 
-.arrivals-right-bottom{
-    display:flex;
-    justify-content: center;
+.arrivals-right-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
 }
 
-.pagination-container{
-    margin: 30px;
+.pagination-container {
+  margin: 20px;
 }
 
-.pagination-item{
-    color: yellow !important;
+.pagination-item {
+  color: yellow !important;
 }
 
 .cup-container-outside {
@@ -113,10 +115,23 @@
   padding: 8;
 }
 
-.pagination-item.Mui-selected {
-  background-color: rgba(255, 255, 0, 0.5) !important; /* Semi-transparent yellow circle */
+.Mui-selected {
+  background-color: rgba(
+    255,
+    255,
+    0,
+    0.5
+  ) !important; /* Semi-transparent yellow circle */
 }
 
-.MuiPaginationItem-root.Mui-disabled{
-opacity: 1 !important;
+.MuiPaginationItem-root.Mui-disabled {
+  opacity: 1 !important;
+}
+
+.arrival-search{
+  width: 170px;
+  background-color: blue;
+  border: 1px solid yellow;
+  color : yellow;
+  outline: none;  
 }

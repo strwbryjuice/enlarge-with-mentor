@@ -1,0 +1,13 @@
+.arrivals-s-textbox-m{
+display: flex;
+flex-direction: column;
+}
+.arrivals-s-textbox-s{
+    display: flex;
+}
+    
+
+.x:after{
+    content: "\00d7";
+
+}

@@ -1,13 +1,15 @@
 .canvas-container{
         background-color: white;
-        width: 500px;
-        height: 500px;
+        width: 550px;
+        height: 400px;
 }
 
 #button-container{
  display: flex;
  justify-content: space-between;
- width: 500px;
+ width: 550px;
+ margin-top: 15px;;
+ height: 50px;
 }
 
 .button-left{
@@ -18,4 +20,35 @@
 .button-right{
         display: flex;
         justify-content: flex-end;
+}
+
+.canvas-drawing-buttons{
+        width: 60px;
+        height: 30px;
+        border: 1px solid yellow;
+        background-color: blue;
+        color: yellow;
+        margin-right: 15px;
+}
+
+.canvas-drawing-buttons:hover{
+        border: 1px solid blue;
+        background-color: yellow;
+        color: blue;
+        margin-right: 15px;
+}
+
+.subimit-button{
+        align-self: stretch;
+        width: 100px;
+        border: none;
+        background-color: yellow;
+        color: blue;
+}
+
+.subimit-button:hover{
+        align-self: stretch;
+        border: none;
+        background-color: red;
+        color: yellow;
 }
