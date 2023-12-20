@@ -1,0 +1,125 @@
+.admin-s-container{
+display: flex;
+flex-direction: column; 
+height: 90vh; 
+}
+
+.admin-s-box-top, .admin-s-box-bottom{
+    margin-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-s-box-top-left, .admin-s-box-bottom-left{
+    width: 45%;
+}
+
+.admin-s-box-top-right, .admin-s-box-bottom-right {
+    width: 45%; /* Ensure both have the same width */
+    padding: 0;
+}
+
+.admin-s-box-bottom-right{
+    margin-right: 15px;
+}
+
+.admin-s-box-top-right{
+    position: relative;
+    padding:0;
+    margin:0;
+}
+
+.admin-explain{
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    font-size: 20px;
+    line-height: 1.3rem;
+}
+
+.admin-s-name{
+    font-size: 40px;
+}
+
+.admin-s-container input{
+    background: blue;
+    border: none;
+    color: yellow;
+    font-size: 16px;
+}
+
+.admin-s-infos ,.admin-s-box-bottom-left{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    
+}
+
+
+.mouse-drawing-import{
+background: lightblue;
+width: 90%;
+height: 250px;
+margin-top: 5px;
+}
+
+.admin-upload-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.admin-upload-box{
+    border: solid 1px yellow;
+}
+
+.admin-upload-box-inside{
+    position:relative;
+    height: 120px;
+}
+
+.choose-a-file{
+    position:absolute;
+    top: 0;
+    margin-left: 16px;
+}
+
+.admin-file-format{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 16px;
+}
+
+.admin-uploaded-file{
+    line-height:2px;
+}
+
+.admin-bottom-most {
+    margin-top: auto; /* Push to the bottom */
+}
+
+.check-complete-box-container{
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+}
+
+.check-complete-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-bottom:15px;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 7px;
+    letter-spacing: .2rem;
+
+    background-color: yellow;
+    color:blue;
+    width: 170px;
+    height: 50px;
+}
+.check-complete-box:hover{
+    background-color: red;
+    color:yellow;
+}
