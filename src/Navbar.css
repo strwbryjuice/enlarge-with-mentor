@@ -12,12 +12,13 @@ ul {
   z-index: 6;
   font-weight: 300;
   font-size: 1.3rem; 
+  height: 75px;
+  width: 100vw;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
   align-items: center; 
 }
 .right-navbar{
@@ -47,7 +48,7 @@ ul {
   z-index: 1000; /* Make sure dropdown is above other elements */
   top: 100%; /* Positions right below the parent container, adjust if necessary */
   left: 0; /* Aligns with the left edge of the parent container */
-  margin-right: 0.1rem;
+  margin-right: 0;
 }
 
 .home-button{

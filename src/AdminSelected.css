@@ -39,6 +39,7 @@ height: 90vh;
 
 .admin-s-name{
     font-size: 40px;
+    margin-top: 30%;
 }
 
 .admin-s-container input{
@@ -58,7 +59,7 @@ height: 90vh;
 .mouse-drawing-import{
 background: lightblue;
 width: 90%;
-height: 250px;
+height: 170%;
 margin-top: 5px;
 }
 

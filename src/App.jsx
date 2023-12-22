@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 import * as THREE from "three";
 import { Canvas, useThree } from "@react-three/fiber";
@@ -15,14 +16,13 @@ const initialCameraPosition = [600, 300, 600];
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
 const cupPositions = [
-  { x: 60, y: 60, z: 80 },
-  { x: 60, y: 20, z: -90 }
+  { x: 90, y: 60, z: 155 },
+  { x: 89, y: 31, z: 140 }
 ];
 
 
-const ObjectModelings = ({ setClickedCupIndex }) => {
+const ObjectModelings = ({ setClickedCupIndex, setDrawerOpen }) => {
   const obj = useLoader(OBJLoader, "/structure2.obj");
-
   const smallcup = useLoader(OBJLoader, "/koffie2.obj");
 
   const cupArray = [
@@ -31,6 +31,7 @@ const ObjectModelings = ({ setClickedCupIndex }) => {
   ];
 
   const material = new THREE.MeshStandardMaterial({ color: new THREE.Color('rgb(255, 255, 0)') });
+
 
   const setObjectMaterial = (parentObject) => {
     parentObject.traverse((child) => {
@@ -55,6 +56,7 @@ const ObjectModelings = ({ setClickedCupIndex }) => {
  */
   const clickedfucnction = (index) => {
     setClickedCupIndex(index);
+    setDrawerOpen(true);
   };
 
   return (
@@ -69,14 +71,33 @@ const ObjectModelings = ({ setClickedCupIndex }) => {
   );
 };
 
-function Hook({ clickedCupIndex, cupPosition, initialCameraPosition }) {
+
+function Hook({ clickedCupIndex }) {
   const { camera } = useThree();
 
   useFrame(() => {
     if (clickedCupIndex !== -1) {
       // When a cup is clicked, move the camera towards the cup
-      const targetPosition = new THREE.Vector3(cupPosition.x, cupPosition.y, cupPosition.z + 200);
+      let cupX = cupPositions[clickedCupIndex].x;
+      let cupZ = cupPositions[clickedCupIndex].z;
+      let targetPosition;
+
+      if (cupX < 0) {
+        cupX = cupX - 5;
+      } else {
+        cupX = cupX + 150;
+      }
+
+      if (cupZ < 0) {
+        cupZ = cupZ - 90;
+      } else {
+        cupZ = cupZ + 150;
+      }
+
+      targetPosition = new THREE.Vector3(cupX, cupPositions[clickedCupIndex].y + 20, cupZ);
+
       camera.position.lerp(targetPosition, 0.05);
+      camera.zoom = 5;
     }
   });
 
@@ -85,13 +106,12 @@ function Hook({ clickedCupIndex, cupPosition, initialCameraPosition }) {
 
 export default function App() {
   const [clickedCupIndex, setClickedCupIndex] = useState(-1);
-  const [cupPosition, setCupPosition] = useState({ x: 600, y: 300, z: 600 });
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const onCupClick = (index) => {
-    setClickedCupIndex(index);
-    setDrawerOpen(true);
+  const handleCloseDrawer = () => {
+    setDrawerOpen(false);
   };
+
 
   const resetCamera = () => {
     if (clickedCupIndex !== -1) {
@@ -102,54 +122,62 @@ export default function App() {
 
   return (
     <div className="App">
-      <Canvas
+      <div className="canvas-container-app">
+        <Canvas
+          camera={{
+            position: [600, 300, 600],
+            fov: 60,
+            near: 1,
+            far: 100000,
+            zoom: 2,
+          }}
+        >
+          <color attach="background" args={['blue']} />
+          <ambientLight intensity={0.9} />
+          <directionalLight
+            color="yellow"
+            position={[0, 90, 5]}
+          />
 
-        camera={{
-          position: [600, 300, 600],
-          fov: 60,
-          near: 1,
-          far: 100000,
-          zoom: 2,
-        }}
-      >
-        <color attach="background" args={['blue']} />
-        <ambientLight intensity={0.9} />
-        <directionalLight
-          color="yellow"
-          position={[0, 90, 5]}
-        />
+          <Hook
+            clickedCupIndex={clickedCupIndex}
+            resetCamera={resetCamera}
+            initialCameraPosition={initialCameraPosition}
+          />
+          <ObjectModelings
+            setClickedCupIndex={setClickedCupIndex}
+            setDrawerOpen={setDrawerOpen} />
 
-        <Hook
-          clickedCupIndex={clickedCupIndex}
-          cupPosition={cupPosition}
-          resetCamera={resetCamera}
-          initialCameraPosition={initialCameraPosition}
-        />
-        <ObjectModelings
-          setClickedCupIndex={setClickedCupIndex}
-          setCupPosition={setCupPosition} />
+          <OrbitControls
+            minPolarAngle={(Math.PI / 4)}
+            maxPolarAngle={Math.PI / 2}
+          />
+        </Canvas>
 
-        <OrbitControls
-          minPolarAngle={(Math.PI / 4)}
-          maxPolarAngle={Math.PI / 2}
-        />
-      </Canvas>
+        <Drawer
+          variant="persistent"
+          anchor="right"
+          open={drawerOpen}
+        >
+          <div className="drawer-contents">
+          <button 
+            onClick={handleCloseDrawer} 
+            className="close-button">
+          </button>
 
-      <Drawer
-        variant="persistent"
-        anchor="right"
-        open={drawerOpen}
-      >
-        <div style={{ width: 250, padding: '16px' }}>
-          <p>Donator: MinSook Kim</p>
-          <p>Arrival Date: 2023/04/11</p>
-          <div style={{
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'yellow'
-          }}></div>
-        </div>
-      </Drawer>
+            <p>Donator: MinSook Kim</p>
+            <p>Arrival Date: 2023/04/11</p>
+            <div style={{
+              width: '250px',
+              height: '250px',
+              backgroundColor: 'red'
+            }}></div>
+          </div>
+        </Drawer>
+      </div>
+
+
+
 
     </div>
   );
