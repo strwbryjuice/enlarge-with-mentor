@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { DDSLoader } from "three-stdlib";
 import { useFrame } from '@react-three/fiber';
-import { useState } from "react";
+import { useState} from "react";
 import { Drawer } from '@mui/material';
 
 import "./App.css";
@@ -79,6 +79,7 @@ const ObjectModelings = ({ setClickedCupIndex, setDrawerOpen }) => {
 
 
 function Hook({ clickedCupIndex }) {
+
   const { camera } = useThree();
 
   useFrame(() => {
@@ -89,26 +90,34 @@ function Hook({ clickedCupIndex }) {
       let targetPosition;
 
       if (cupX < 0) {
-        cupX = cupX - 5;
+        cupX = cupX - 205;
       } else {
-        cupX = cupX + 150;
+        cupX = cupX + 205;
       }
 
       if (cupZ < 0) {
-        cupZ = cupZ - 90;
+        cupZ = cupZ - 250;
       } else {
-        cupZ = cupZ + 150;
+        cupZ = cupZ + 250;
       }
+      targetPosition = new THREE.Vector3(cupX, cupPositions[clickedCupIndex].y+130, cupZ);
 
-      targetPosition = new THREE.Vector3(cupX, cupPositions[clickedCupIndex].y + 20, cupZ);
-
+      
       camera.position.lerp(targetPosition, 0.05);
-      camera.zoom = 5;
+
+      const targetZoom = 6;
+      camera.zoom += (targetZoom - camera.zoom) * 0.1;
+      camera.updateProjectionMatrix();
+
+      console.log("Camera Zoom Level:", camera.zoom);
+
+      // console.log(camera.position) 
     }
   });
 
   return null;
 }
+
 
 export default function App() {
   const [clickedCupIndex, setClickedCupIndex] = useState(-1);
@@ -116,6 +125,7 @@ export default function App() {
 
   const handleCloseDrawer = () => {
     setDrawerOpen(false);
+    setClickedCupIndex(-1); // Reset clicked cup index when drawer closes
   };
 
 
@@ -138,6 +148,7 @@ export default function App() {
             zoom: 2,
           }}
         >
+
           <color attach="background" args={['blue']} />
           <ambientLight intensity={0.9} />
           <directionalLight
