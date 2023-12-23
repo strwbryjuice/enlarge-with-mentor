@@ -12,6 +12,12 @@ import { Drawer } from '@mui/material';
 
 import "./App.css";
 
+const donatorArray = [
+  { name: "first", arrivaldate: 20230523 },
+  { name: "second", arrivaldate: 20230601 }
+]
+
+
 const initialCameraPosition = [600, 300, 600];
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
@@ -160,16 +166,28 @@ export default function App() {
           open={drawerOpen}
         >
           <div className="drawer-contents">
-          <button 
-            onClick={handleCloseDrawer} 
-            className="close-button">
-          </button>
+            <button
+              onClick={handleCloseDrawer}
+              className="close-button">
+            </button>
 
-            <p>Donator: MinSook Kim</p>
-            <p>Arrival Date: 2023/04/11</p>
             <div style={{
-              width: '250px',
-              height: '250px',
+              width: '150px',
+              height: '200px',
+              backgroundColor: 'red'
+            }}></div>
+
+            {clickedCupIndex !== -1 && clickedCupIndex < donatorArray.length ? (
+              <>
+                <p>Donator: {donatorArray[clickedCupIndex].name}</p>
+                <p>Arrival Date: {donatorArray[clickedCupIndex].arrivaldate}</p>
+              </>
+            ) : (
+              <p>No donator selected</p>
+            )}
+            <div style={{
+              width: '450px',
+              height: '350px',
               backgroundColor: 'red'
             }}></div>
           </div>
