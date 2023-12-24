@@ -11,7 +11,7 @@ function AdminSelected() {
                         <div className="admin-s-name"><p>Jessica Harman,</p></div>
                     </div>
 
-                    <div>
+                    <div className="admin-s-infos-container">
 
                         <div className="admin-s-infos">
                             <div className="admin-s-infos-left">
@@ -94,12 +94,10 @@ function AdminSelected() {
                         </div>
 
                         <div>
-                            <p className="admin-uploaded-file">1003-cup.obj</p>
-                            <p className="admin-uploaded-file">1003-cup.obj</p>
-                            <p className="admin-uploaded-file">1003-cup.obj</p>
+                            <p className="admin-uploaded-file">1003-cup-1.obj</p>
                         </div>
                         <div>
-                            <p className="admin-uploaded-file">1003-cup.jpg</p>
+                            <p className="admin-uploaded-file">1003-cup-1.jpg</p>
                         </div>
 
                     </div>

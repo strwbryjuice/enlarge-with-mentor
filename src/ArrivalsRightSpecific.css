@@ -1,19 +1,60 @@
-.arrivals-s-textbox-m{
-display: flex;
-flex-direction: column;
-}
-    
-
-.x:after{
-    content: "\00d7";
-
-}
-
-.arrivals-s-infos{
+.arrivals-right-spe{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.arrivals-spe-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .arrivals-s-textbox-s{
+    width: 98%;
+}
+
+.arrivals-s-right-top-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; /* Align the child (X) to the start (top) */
+    height: 100%; /* Take full height of the parent */
+    margin-right: 15px;
+}
+
+.arrivals-s-right-top-right .X::before {
+  content: "\00D7"; /* Multiplication sign '×' */
+  font-size: 28px;
+  font-weight: 200;
+  color: yellow;
+  cursor: pointer;
+}
+.arrivals-s-textbox-s {
     display: flex;
     flex-direction: column;
+  }
+
+.arrivals-s-infos{
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.arrivals-spe-bottom{
+    display: flex;
+    height: 100%;
+}
+
+.arrivals-spe-picture{
+    margin-left: 20%;
+    border: solid yellow 1px;
+    width: 35%;
+    height: 100%;
+}
+.arrivals-spe-signiture{
+    margin-left: 15px;
+    border: solid yellow 1px;
+    width: 41%;
+    height: 100%;
 }

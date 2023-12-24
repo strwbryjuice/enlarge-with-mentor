@@ -1,4 +1,4 @@
-const arrivedNum = 40;
+const arrivedNum = 1;
 
 function ArrivalLeft(){
 

@@ -4,8 +4,10 @@ function ArrivalsRightSpecific() {
 
     return (
 
-        <div className="arrivals-right">
-            
+        <div className="arrivals-right-spe">
+
+            <div className="arrivals-spe-top">
+
                 <div className="arrivals-s-textbox-s">
 
                     <div className="arrivals-s-infos">
@@ -64,16 +66,18 @@ function ArrivalsRightSpecific() {
                         </div>
                     </div>
 
-            </div>
-
-            <div className="arrivals-s-right-top-right">
-                    <div className="X">X</div>
                 </div>
 
-            <div className="arrivals-s-right-bottom">
+                <div className="arrivals-s-right-top-right">
+                    <div className="X"></div>
+                </div>
+            </div>
 
-            </div >
 
+            <div className="arrivals-spe-bottom">
+                <div className="arrivals-spe-picture"></div>
+                <div className="arrivals-spe-signiture"></div>
+            </div>
         </div>
     )
 }

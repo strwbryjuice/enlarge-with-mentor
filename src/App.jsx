@@ -13,7 +13,7 @@ import { Drawer } from '@mui/material';
 import "./App.css";
 
 const donatorArray = [
-  { name: "first", arrivaldate: 20230523 },
+  { name: "Jessica Harman", arrivaldate: 20230523 },
   { name: "second", arrivaldate: 20230601 }
 ]
 
@@ -22,18 +22,16 @@ const initialCameraPosition = [600, 300, 600];
 THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
 const cupPositions = [
-  { x: 90, y: 60, z: 155 },
-  { x: 89, y: 31, z: 140 }
+  { x: 80, y: 40, z: 140 },
 ];
 
 
 const ObjectModelings = ({ setClickedCupIndex, setDrawerOpen }) => {
   const obj = useLoader(OBJLoader, "/structure2.obj");
-  const smallcup = useLoader(OBJLoader, "/koffie2.obj");
+  //const smallcup = useLoader(OBJLoader, "/koffie2.obj");
 
   const cupArray = [
-    smallcup,
-    smallcup.clone()
+    // smallcup,
   ];
 
   const material = new THREE.MeshStandardMaterial({ color: new THREE.Color('rgb(255, 255, 0)') });
@@ -51,7 +49,7 @@ const ObjectModelings = ({ setClickedCupIndex, setDrawerOpen }) => {
   setObjectMaterial(obj);
   cupArray.forEach(cup => setObjectMaterial(cup));
 
-  obj.position.set(0, -90, 0);
+  obj.position.set(0, -80, 0);
 
   for (let i = 0; i < cupArray.length; i++) {
     cupArray[i].position.set(cupPositions[i].x, cupPositions[i].y, cupPositions[i].z);
@@ -100,7 +98,7 @@ function Hook({ clickedCupIndex }) {
       } else {
         cupZ = cupZ + 250;
       }
-      targetPosition = new THREE.Vector3(cupX, cupPositions[clickedCupIndex].y+130, cupZ);
+      targetPosition = new THREE.Vector3(cupX, cupPositions[clickedCupIndex].y+100, cupZ);
 
       
       camera.position.lerp(targetPosition, 0.05);
@@ -144,7 +142,7 @@ export default function App() {
             position: [600, 300, 600],
             fov: 60,
             near: 1,
-            far: 100000,
+            far: 10000,
             zoom: 2,
           }}
         >

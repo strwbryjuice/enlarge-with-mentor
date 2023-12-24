@@ -31,7 +31,7 @@ height: 90vh;
 
 .admin-explain{
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: -15px;
     font-size: 20px;
     line-height: 1.3rem;
@@ -39,7 +39,7 @@ height: 90vh;
 
 .admin-s-name{
     font-size: 40px;
-    margin-top: 30%;
+
 }
 
 .admin-s-container input{
@@ -123,4 +123,16 @@ margin-top: 5px;
 .check-complete-box:hover{
     background-color: red;
     color:yellow;
+}
+
+.admin-s-infos-container{
+    margin-top: 20%;
+}
+
+.admin-s-infos{
+    margin-top: 15px;
+}
+
+.admin-s-box-bottom{
+    margin-top: 15px;
 }

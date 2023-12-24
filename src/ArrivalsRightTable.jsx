@@ -38,7 +38,7 @@ function ArrivalsRightTable(){
                                                 Thank you <br /> Jessica
                                             </div>
                                             <div className="right-text">
-                                                Date of arrival
+                                                2024/02/04
                                             </div>
                                         </div>
                                     </Paper>
