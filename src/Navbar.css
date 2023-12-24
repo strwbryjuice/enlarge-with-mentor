@@ -54,6 +54,7 @@ ul {
 .home-button{
   width: 20px;
   height: 20px;
-  background-color: yellow; 
   margin-left: 1rem;
+  background-image: url('img/enlarge-logo.png');
+  background-size: contain;
 }

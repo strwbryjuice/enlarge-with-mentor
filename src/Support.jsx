@@ -47,7 +47,7 @@ function Support() {
                             <input
                                 className="support-input"
                                 type="text"
-                                placeholder=""
+                                placeholder="Name or Nickname"
                             />
                         </div>
                     </div>

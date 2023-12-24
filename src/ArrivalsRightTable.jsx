@@ -27,25 +27,25 @@ function ArrivalsRightTable(){
 
     return(<div className="arrivals-right">
                 <div className="arrivals-right-top">
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Grid container spacing={2}>
-                            {Array.from(Array(12)).map((_, index) => (
-                                <Grid item xs={3} key={index} > {/* 3 columns out of 12 for each item */}
-                                    <Paper elevation={0} >
-                                        <div className="cup-img"></div>
-                                        <div className="textbox">
-                                            <div className="left-text">
-                                                Thank you <br /> Jessica
-                                            </div>
-                                            <div className="right-text">
-                                                2024/02/04
-                                            </div>
-                                        </div>
-                                    </Paper>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Box>
+                <Box sx={{ flexGrow: 1 }}>
+    <Grid container spacing={2}>
+        {Array.from(Array(12)).map((_, index) => (
+            <Grid xs={3} key={index}> {/* 3 columns out of 12 for each item */}
+                <Paper elevation={0}>
+                    <div className="cup-img"></div>
+                    <div className="textbox">
+                        <div className="left-text">
+                            Thank you <br /> Jessica
+                        </div>
+                        <div className="right-text">
+                            2024/02/04
+                        </div>
+                    </div>
+                </Paper>
+            </Grid>
+        ))}
+    </Grid>
+</Box>
                 </div>
                 <div className="arrivals-right-bottom">
                     <div className="pagination-container">

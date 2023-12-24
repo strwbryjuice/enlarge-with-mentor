@@ -78,7 +78,11 @@ function ArrivalsRightSpecific() {
                 <div className="arrivals-spe-picture"></div>
                 <div className="arrivals-spe-signiture"></div>
             </div>
+
+            
         </div>
+
+        
     )
 }
 
